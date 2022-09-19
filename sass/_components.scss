@@ -5,7 +5,48 @@
       rgba($color-primary, 0.5)
     ),
     url(/assets/img/header.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 100vh;
+  display: grid;
+
+  &__nav {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    &__img {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+
+    &-container {
+      margin-left: 12rem;
+    }
+
+    &__list {
+      list-style-type: none;
+      display: flex;
+    }
+    &__item {
+      font-size: 1.6rem;
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+    }
+  }
+
+  h1 {
+    margin: 0 auto;
+    margin-top: 0rem;
+    color: $color-white;
+    font-weight: 700;
+    width: 90rem;
+  }
 }
 
 ////////////////////

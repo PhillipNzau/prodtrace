@@ -44,7 +44,10 @@ body {
   font-family: 400;
   line-height: 1.6;
 
-  a {
+  a,
+  a:link,
+  a:visited {
+    color: white;
     text-decoration: none;
   }
 }
