@@ -1,0 +1,115 @@
+.header {
+  background-image: linear-gradient(
+      to right,
+      rgba($color-primary, 0.5),
+      rgba($color-primary, 0.5)
+    ),
+    url(/assets/img/header.webp);
+  height: 100vh;
+}
+
+////////////////////
+/// Story section
+.story {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 3rem;
+  padding: 0 10rem;
+
+  &__content {
+    align-self: center;
+    h1 {
+      margin-left: -2rem;
+    }
+    width: 50rem;
+  }
+
+  &__img {
+    position: relative;
+    width: 60rem;
+    height: 60rem;
+    img {
+      position: absolute;
+      top: -18%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
+
+///////////////////
+/// Impact section
+.impact {
+  background-color: $color-tertiary;
+  padding: 10rem 10rem 20rem 10rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
+  grid-gap: 3rem;
+
+  &__image {
+    position: relative;
+    width: 36rem;
+    height: 36rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      display: block;
+    }
+
+    &-2 {
+      position: absolute;
+      top: 40%;
+      left: 45%;
+    }
+  }
+
+  &__content {
+    p {
+      max-width: 57rem;
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
+
+////////////////////
+/// Services section
+.services {
+  background-color: $color-secondary;
+  padding: 10rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 3rem;
+    margin-top: 5rem;
+  }
+
+  &__item {
+    text-align: center;
+    img {
+      margin: 0 auto;
+      width: 20rem;
+      height: 20rem;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
+
+////////////////////
+/// Contact section
+.contact {
+  background-image: linear-gradient(
+      to right,
+      rgba($color-secondary, 0.5),
+      rgba($color-secondary, 0.5)
+    ),
+    url(/assets/img/contact.webp);
+}

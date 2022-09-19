@@ -1,0 +1,31 @@
+%typography-format {
+  color: $color-primary;
+  font-weight: 400;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.heading {
+  &-1 {
+    @extend %typography-format;
+    font-size: 7rem;
+    text-transform: uppercase;
+  }
+
+  &-2 {
+    font-size: 5rem;
+    color: $color-white;
+  }
+
+  &-3 {
+    @extend %typography-format;
+    font-size: 3.2rem;
+  }
+}
+
+.paragraph-1 {
+  @extend %typography-format;
+  font-size: 1.6rem;
+}

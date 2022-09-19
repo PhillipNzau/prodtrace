@@ -1,7 +1,7 @@
 @font-face {
   font-family: "OktaNueHeavy";
   font-style: bold;
-  src: url(../assets/fonts/OktaNeue-Heavy.woff) format("woff");
+  src: url(/assets/fonts/OktaNeue-Heavy.woff) format("woff");
 }
 
 @font-face {
@@ -13,14 +13,14 @@
 @font-face {
   font-family: "OktaNueRegular";
   font-style: normal;
-  src: url(../assets/fonts/OktaNeue-Regular.woff) format("woff");
+  src: url(/assets/fonts/OktaNeue-Regular.woff) format("woff");
 }
 
 $color-primary: #004737;
-$color-secondary: #F0AB1F;
-$color-tertiary: #89D0C0;
-$color-tertiary-light: #E2FFF5;
-$color-white: #FFFFFF;
+$color-secondary: #f0ab1f;
+$color-tertiary: #89d0c0;
+$color-tertiary-light: #e2fff5;
+$color-white: #ffffff;
 
 // Resets
 * {
@@ -40,7 +40,7 @@ html {
 }
 
 body {
-  font-family: "OktaNueRegular", sans-serif;
+  font-family: "OktaNueRegular", sans-serif !important;
   font-family: 400;
   line-height: 1.6;
 
