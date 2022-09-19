@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "OktaNueHeavy";
+  font-style: bold;
+  src: url(../assets/fonts/OktaNeue-Heavy.woff) format("woff");
+}
+
+@font-face {
+  font-family: "OktaNueBold";
+  font-style: bold;
+  src: url(../assets/fonts/OktaNeue-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "OktaNueRegular";
+  font-style: normal;
+  src: url(../assets/fonts/OktaNeue-Regular.woff) format("woff");
+}
+
+$color-primary: #004737;
+$color-secondary: #F0AB1F;
+$color-tertiary: #89D0C0;
+$color-tertiary-light: #E2FFF5;
+$color-white: #FFFFFF;
+
+// Resets
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  font-family: "OktaNueRegular", sans-serif;
+  font-family: 400;
+  line-height: 1.6;
+
+  a {
+    text-decoration: none;
+  }
+}
