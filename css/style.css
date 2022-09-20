@@ -31,6 +31,7 @@ html {
       font-size: 50%; } }
 
 body {
+  overflow-x: hidden;
   font-family: "OktaNueRegular", sans-serif !important;
   font-family: 400;
   line-height: 1.6; }
@@ -132,10 +133,13 @@ body label, .contact__form-group input,
       .header__nav__item:hover::after {
         width: 100%; }
   .header h1 {
-    color: #ffffff; }
+    color: #ffffff;
+    align-items: center;
+    margin-top: 15rem; }
     @media only screen and (max-width: 50em) {
       .header h1 {
-        font-size: 5em; } }
+        font-size: 5em;
+        margin-top: 20vh; } }
   .header__menu {
     transition: all 1.2s ease-in-out; }
     .header__menu-svg {

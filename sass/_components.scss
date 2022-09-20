@@ -9,10 +9,6 @@
   background-repeat: no-repeat;
   height: 100vh;
 
-  @media only screen and (max-width: $bp-medium) {
-    // overflow: hidden;
-  }
-
   &__nav {
     display: flex;
     align-items: center;
@@ -76,8 +72,11 @@
 
   h1 {
     color: $color-white;
+    align-items: center;
+    margin-top: 15rem;
     @media only screen and (max-width: $bp-medium) {
       font-size: 5em;
+      margin-top: 20vh;
     }
   }
 
