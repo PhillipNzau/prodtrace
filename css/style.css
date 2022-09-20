@@ -23,6 +23,7 @@
   box-sizing: inherit; }
 
 html {
+  scroll-behavior: smooth;
   box-sizing: border-box;
   font-size: 62.5%; }
   @media only screen and (max-width: 81.25em) {
@@ -149,13 +150,13 @@ body label, .contact__form-group input,
     .header__menu__list {
       list-style-type: none;
       color: #004737 !important; }
+    .header__menu__link {
+      color: #004737 !important;
+      font-size: 1.6rem; }
     .header__menu__item {
-      font-size: 1.6rem;
       padding: 1.3rem;
       border-bottom: 1px solid #000;
       transition: all 0.2s ease-in-out; }
-      .header__menu__item a {
-        color: #004737 !important; }
       .header__menu__item:hover {
         background-color: #47ffd6;
         cursor: pointer; }

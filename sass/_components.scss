@@ -106,17 +106,15 @@
       list-style-type: none;
       color: $color-primary !important;
     }
-
-    &__item {
+    &__link {
+      color: $color-primary !important;
       font-size: 1.6rem;
+    }
+    &__item {
       padding: 1.3rem;
       border-bottom: 1px solid #000;
 
       transition: all 0.2s ease-in-out;
-
-      a {
-        color: $color-primary !important;
-      }
 
       &:hover {
         background-color: lighten($color-primary, 50%);
