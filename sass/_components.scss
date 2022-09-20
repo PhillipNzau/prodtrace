@@ -36,8 +36,22 @@
     }
     &__item {
       font-size: 1.6rem;
+      transition: all 0.2s ease-in-out;
       &:not(:last-child) {
         margin-right: 3rem;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $color-white;
+        transition: width 0.4s ease-in;
+      }
+
+      &:hover::after {
+        width: 100%;
       }
     }
   }
@@ -136,6 +150,7 @@
 
   &__item {
     text-align: center;
+    padding: 0 5rem;
     img {
       margin: 0 auto;
       width: 20rem;
@@ -161,18 +176,17 @@
   grid-gap: 3rem;
   padding: 10rem;
 
-  &__content {
-    align-self: center;
-  }
-
-  &__form-container {
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__form {
     background-color: $color-white;
     border-radius: 2rem;
     padding: 6rem 3rem;
-    max-width: 57rem;
+    width: 57rem;
 
     &-group {
       margin-bottom: 2rem;

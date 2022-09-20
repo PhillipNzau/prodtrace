@@ -96,9 +96,19 @@ body label, .contact__form-group input,
       list-style-type: none;
       display: flex; }
     .header__nav__item {
-      font-size: 1.6rem; }
+      font-size: 1.6rem;
+      transition: all 0.2s ease-in-out; }
       .header__nav__item:not(:last-child) {
         margin-right: 3rem; }
+      .header__nav__item::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #ffffff;
+        transition: width 0.4s ease-in; }
+      .header__nav__item:hover::after {
+        width: 100%; }
   .header h1 {
     margin: 0 auto;
     margin-top: 0rem;
@@ -161,7 +171,8 @@ body label, .contact__form-group input,
     grid-gap: 3rem;
     margin-top: 5rem; }
   .services__item {
-    text-align: center; }
+    text-align: center;
+    padding: 0 5rem; }
     .services__item img {
       margin: 0 auto;
       width: 20rem;
@@ -175,13 +186,15 @@ body label, .contact__form-group input,
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 3rem;
   padding: 10rem; }
-  .contact__content {
-    align-self: center; }
+  .contact__item {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
   .contact__form {
     background-color: #ffffff;
     border-radius: 2rem;
     padding: 6rem 3rem;
-    max-width: 57rem; }
+    width: 57rem; }
     .contact__form-group {
       margin-bottom: 2rem; }
       .contact__form-group input,
