@@ -35,21 +35,39 @@ body {
   body a:visited {
     color: white;
     text-decoration: none; }
+  body input,
+  body label {
+    display: block;
+    margin-bottom: 1rem; }
+  body input:focus,
+  body textarea:focus {
+    box-shadow: none;
+    outline: none; }
 
 .heading-1, .heading-3, .paragraph-1 {
   color: #004737;
   font-weight: 400; }
+
+body input,
+body label, .contact__form-group input,
+.contact__form-group textarea {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #004737; }
 
 .text-center {
   text-align: center; }
 
 .heading-1 {
   font-size: 7rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: "OktaNueHeavy", sans-serif !important; }
 
 .heading-2 {
+  font-family: "OktaNueHeavy", sans-serif !important;
   font-size: 5rem;
-  color: #ffffff; }
+  color: #ffffff;
+  text-transform: uppercase; }
 
 .heading-3 {
   font-size: 3.2rem; }
@@ -152,7 +170,43 @@ body {
       display: block; }
 
 .contact {
-  background-image: linear-gradient(to right, rgba(240, 171, 31, 0.5), rgba(240, 171, 31, 0.5)), url(/assets/img/contact.webp); }
+  background-image: linear-gradient(to right, rgba(240, 171, 31, 0.5), rgba(240, 171, 31, 0.5)), url(/assets/img/contact.webp);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 3rem;
+  padding: 10rem; }
+  .contact__content {
+    align-self: center; }
+  .contact__form {
+    background-color: #ffffff;
+    border-radius: 2rem;
+    padding: 6rem 3rem;
+    max-width: 57rem; }
+    .contact__form-group {
+      margin-bottom: 2rem; }
+      .contact__form-group input,
+      .contact__form-group textarea {
+        width: 100%;
+        padding: 1rem; }
+
+.btn {
+  border: none;
+  background-color: #004737;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 1rem auto;
+  transition: all 0.2s ease; }
+  .btn:active {
+    box-shadow: none; }
+  .btn:hover {
+    background-color: #00614b;
+    transform: translateY(-1px);
+    cursor: pointer; }
+  .btn-primary {
+    width: 100%;
+    height: 5.4rem;
+    border-radius: 3.9rem; }
 
 .footer {
   background-color: #004737;

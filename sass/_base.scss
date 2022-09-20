@@ -50,4 +50,17 @@ body {
     color: white;
     text-decoration: none;
   }
+
+  input,
+  label {
+    display: block;
+    margin-bottom: 1rem;
+    @extend %default-paragraph;
+  }
+
+  input:focus,
+  textarea:focus {
+    box-shadow: none;
+    outline: none;
+  }
 }
