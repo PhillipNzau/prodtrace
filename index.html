@@ -20,6 +20,23 @@
           />
         </div>
 
+        <!-- collapsable trigger -->
+        <a class="header__menu-btn" role="button" onclick="myFunc()">
+          <svg
+            class="header__menu-svg"
+            width="30"
+            height="20"
+            viewBox="0 0 27 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M26.625 18.25H0.375V15.3333H26.625V18.25ZM26.625 10.9583H0.375V8.04167H26.625V10.9583ZM26.625 3.66667H13.5V0.75H26.625V3.66667Z"
+              fill="black"
+            />
+          </svg>
+        </a>
+
         <div class="header__nav-container">
           <ul class="header__nav__list">
             <li class="header__nav__item"><a href="#"> Home</a></li>
@@ -29,6 +46,14 @@
           </ul>
         </div>
       </nav>
+      <div class="header__menu-container header__menu-inactive" id="toggle">
+        <ul class="header__menu__list">
+          <li class="header__menu__item"><a href="#"> Home</a></li>
+          <li class="header__menu__item"><a href="#"> About</a></li>
+          <li class="header__menu__item"><a href="#"> Services</a></li>
+          <li class="header__menu__item"><a href="#"> Contact Us</a></li>
+        </ul>
+      </div>
 
       <h1 class="heading-1 text-center">Find it's roots before you buy it.</h1>
     </header>
@@ -183,4 +208,6 @@
       </p>
     </footer>
   </body>
+
+  <script src="js/main.js"></script>
 </html>

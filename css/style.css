@@ -98,7 +98,7 @@ body label, .contact__form-group input,
         height: 20rem; } }
     @media only screen and (max-width: 50em) {
       .header__nav {
-        width: auto; } }
+        width: 90vw; } }
     .header__nav-logo {
       width: 100%;
       height: 100%;
@@ -132,6 +132,37 @@ body label, .contact__form-group input,
     @media only screen and (max-width: 50em) {
       .header h1 {
         font-size: 5em; } }
+  .header__menu {
+    transition: all 1.2s ease-in-out; }
+    .header__menu-svg {
+      display: none; }
+      @media only screen and (max-width: 50em) {
+        .header__menu-svg {
+          display: block; } }
+      .header__menu-svg path {
+        fill: #ffffff; }
+    .header__menu-container {
+      margin-top: -23rem;
+      width: 100%;
+      background-color: #e2fff5;
+      height: 21rem; }
+    .header__menu__list {
+      list-style-type: none;
+      color: #004737 !important; }
+    .header__menu__item {
+      font-size: 1.6rem;
+      padding: 1.3rem;
+      border-bottom: 1px solid #000;
+      transition: all 0.2s ease-in-out; }
+      .header__menu__item a {
+        color: #004737 !important; }
+      .header__menu__item:hover {
+        background-color: #47ffd6;
+        cursor: pointer; }
+    .header__menu-inactive {
+      display: none; }
+    .header__menu-active {
+      display: block; }
 
 .story {
   display: grid;
@@ -141,6 +172,9 @@ body label, .contact__form-group input,
   @media only screen and (max-width: 68.75em) {
     .story {
       padding: 0 5rem; } }
+  @media only screen and (max-width: 50em) {
+    .story {
+      padding: 5rem; } }
   .story__content {
     align-self: center;
     width: 50rem; }
@@ -234,6 +268,9 @@ body label, .contact__form-group input,
   .services__item {
     text-align: center;
     padding: 0 5rem; }
+    @media only screen and (max-width: 50em) {
+      .services__item {
+        padding: 0; } }
     .services__item img {
       margin: 0 auto;
       width: 20rem;

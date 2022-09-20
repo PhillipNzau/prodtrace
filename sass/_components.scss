@@ -27,7 +27,7 @@
       height: 20rem;
     }
     @media only screen and (max-width: $bp-medium) {
-      width: auto;
+      width: 90vw;
     }
 
     &-logo {
@@ -42,7 +42,6 @@
     }
 
     &-container {
-      // margin-left: 12rem;
       @media only screen and (max-width: $bp-medium) {
         display: none;
       }
@@ -80,6 +79,57 @@
       font-size: 5em;
     }
   }
+
+  ///////////////
+  /// Collapse menu
+  &__menu {
+    transition: all 1.2s ease-in-out;
+
+    &-svg {
+      display: none;
+      @media only screen and (max-width: $bp-medium) {
+        display: block;
+      }
+      path {
+        fill: $color-white;
+      }
+    }
+
+    &-container {
+      margin-top: -23rem;
+      width: 100%;
+      background-color: $color-tertiary-light;
+      height: 21rem;
+    }
+
+    &__list {
+      list-style-type: none;
+      color: $color-primary !important;
+    }
+
+    &__item {
+      font-size: 1.6rem;
+      padding: 1.3rem;
+      border-bottom: 1px solid #000;
+
+      transition: all 0.2s ease-in-out;
+
+      a {
+        color: $color-primary !important;
+      }
+
+      &:hover {
+        background-color: lighten($color-primary, 50%);
+        cursor: pointer;
+      }
+    }
+    &-inactive {
+      display: none;
+    }
+    &-active {
+      display: block;
+    }
+  }
 }
 
 ////////////////////
@@ -92,6 +142,10 @@
 
   @media only screen and (max-width: $bp-large) {
     padding: 0 5rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 5rem;
   }
 
   &__content {
@@ -231,6 +285,10 @@
   &__item {
     text-align: center;
     padding: 0 5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 0;
+    }
 
     img {
       margin: 0 auto;
