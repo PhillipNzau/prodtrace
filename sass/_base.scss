@@ -22,6 +22,15 @@ $color-tertiary: #89d0c0;
 $color-tertiary-light: #e2fff5;
 $color-white: #ffffff;
 
+// RESPONISE BREAKPOINT
+$bp-largest: 81.25em; // 1300px
+$bp-large: 68.75em; // 1100px
+$bp-medium-1: 56.25em; // 900px
+$bp-medium: 50em; // 800px
+$bp-small-1: 37.5em; // 600px
+$bp-small: 31.25em; // 500px
+$bp-smallest: 25em; // 400px
+
 // Resets
 * {
   margin: 0;
@@ -37,6 +46,10 @@ $color-white: #ffffff;
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%; // 8px/16px = 50% -> 1rem = 8px
+  }
 }
 
 body {
