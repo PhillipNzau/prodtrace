@@ -1,26 +1,24 @@
 ////////////////////
 /// Header section
 .header {
-  background-image: linear-gradient(
-      to right,
-      rgba($color-primary, 0.5),
-      rgba($color-primary, 0.5)
-    ),
-    url(/assets/img/header.webp);
+  background-image: url(/assets/img/header.webp);
+  background-color: $color-primary;
+  background-blend-mode: luminosity;
+
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  display: grid;
 
   @media only screen and (max-width: $bp-medium) {
-    overflow: hidden;
+    // overflow: hidden;
   }
 
   &__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80rem;
+    padding: 10rem;
+    width: 130rem;
     margin: 0 auto;
 
     @media only screen and (max-width: $bp-large) {
@@ -28,13 +26,13 @@
     }
     @media only screen and (max-width: $bp-medium) {
       width: 90vw;
+      padding: 1rem;
     }
 
     &-logo {
       width: 100%;
       height: 100%;
       display: block;
-
       @media only screen and (max-width: $bp-medium) {
         width: 60%;
         height: 60%;
@@ -42,7 +40,10 @@
     }
 
     &-container {
+      margin-left: -25rem;
       @media only screen and (max-width: $bp-medium) {
+        margin-left: 0;
+
         display: none;
       }
     }
@@ -96,7 +97,7 @@
     }
 
     &-container {
-      margin-top: -23rem;
+      margin-top: -5rem;
       width: 100%;
       background-color: $color-tertiary-light;
       height: 21rem;
@@ -133,21 +134,23 @@
 ////////////////////
 /// Story section
 .story {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
-  grid-gap: 3rem;
-  padding: 0 10rem;
+  padding: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 
   @media only screen and (max-width: $bp-large) {
-    padding: 0 5rem;
-  }
-
-  @media only screen and (max-width: $bp-medium) {
     padding: 5rem;
   }
 
   &__content {
     align-self: center;
+    margin-right: 5rem;
+    @media only screen and (max-width: $bp-large) {
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
     h1 {
       margin-left: -2rem;
       @media only screen and (max-width: $bp-medium) {
@@ -166,25 +169,20 @@
 
   &__img {
     position: relative;
-    width: 60rem;
-    height: 60rem;
+    width: 50rem;
+    // height: 60rem;
+    margin-top: -18%;
+    margin-right: 5rem;
 
     @media only screen and (max-width: $bp-large) {
-      width: 100%;
-      height: 50vw;
-      margin-bottom: 2rem;
+      margin-top: 0;
+      margin-right: 0;
     }
     img {
-      position: absolute;
-      top: -18%;
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-
-      @media only screen and (max-width: $bp-small-1) {
-        top: 0;
-      }
     }
   }
 }
@@ -192,47 +190,45 @@
 ///////////////////
 /// Impact section
 .impact {
-  background-color: $color-tertiary;
-  padding: 10rem 10rem 20rem 10rem;
+  background-color: $color-tertiary-light;
 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35em, 1fr));
-  grid-gap: 3rem;
-
-  @media only screen and (max-width: $bp-large) {
-    padding: 5rem 5rem 20rem 5rem;
-  }
+  padding: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 
   @media only screen and (max-width: $bp-medium) {
-    padding: 5rem 5rem;
+    padding: 5rem;
   }
 
   &__image {
     position: relative;
-    width: 36rem;
+    width: 50rem;
     height: 36rem;
+    margin-right: 0rem;
+    margin-top: -10rem;
 
-    @media only screen and (max-width: $bp-medium-1) {
-      width: 26rem;
-      height: 26rem;
-      margin: 3rem 0 8rem 0;
+    @media only screen and (max-width: $bp-large-1) {
+      width: 45rem;
+      height: 36rem;
+      margin-top: 0;
+      margin-bottom: 10rem;
     }
     img {
-      width: 100%;
-      height: 100%;
+      width: 70%;
       object-fit: cover;
-
       display: block;
     }
 
     &-2 {
       position: absolute;
       top: 40%;
-      left: 45%;
+      left: 35%;
 
-      @media only screen and (max-width: $bp-small-1) {
-        top: 20%;
-      }
+      // @media only screen and (max-width: $bp-small-1) {
+      //   top: 20%;
+      // }
       // @media only screen and (max-width: $bp-medium-1) {
       //   top: 0%;
       //   left: 110%;
@@ -241,6 +237,8 @@
   }
 
   &__content {
+    margin-left: 5rem;
+    width: 50rem;
     h1 {
       @media only screen and (max-width: $bp-medium) {
         font-size: 4rem;
@@ -306,12 +304,9 @@
 ////////////////////
 /// Contact section
 .contact {
-  background-image: linear-gradient(
-      to right,
-      rgba($color-secondary, 0.5),
-      rgba($color-secondary, 0.5)
-    ),
-    url(/assets/img/contact.webp);
+  background-image: url(/assets/img/contact.webp);
+  background-color: $color-secondary;
+  background-blend-mode: difference;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
@@ -349,6 +344,8 @@
         @extend %default-paragraph;
         width: 100%;
         padding: 1rem;
+        border-radius: 8px;
+        border: 1px solid #000;
       }
     }
   }
